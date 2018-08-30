@@ -1,14 +1,53 @@
 package com.demo.share.designpattern.builder;
 
 /**
- * ..
- *
- * @author 杨华
- * @version 1.0
- * @company 上海朝阳永续信息技术有限公司
- * @copyright (c) 2016 SunTime Co'Ltd Inc. All rights reserved.
- * @date 2018-08-29 17:32
- * @since JDK1.7
+ * 建造者模式示例
+ * Created by youngwa on 2018/8/29.
  */
 public class SqlSessionConfig {
+    private String url;
+    private int port;
+    private String name;
+    private String password;
+
+    static class Builder {
+        public SqlSessionConfig sessionConfig = new SqlSessionConfig();
+
+        public Builder setUrl(String url){
+            sessionConfig.url = url;
+            return this;
+        }
+
+        public Builder setPort(int port){
+            sessionConfig.port = port;
+            return this;
+        }
+
+        public Builder setName(String name){
+            sessionConfig.name = name;
+            return this;
+        }
+
+        public Builder setPwd(String pwd){
+            sessionConfig.password = pwd;
+            return this;
+        }
+
+        public SqlSessionConfig create() {
+            return sessionConfig;
+        }
+    }
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    @Override
+    public String toString() {
+        return "SqlSessionConfig{" +
+                "url='" + url + '\'' +
+                ", port=" + port +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.demo.share.designpattern.observer;
+
+/**
+ * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ *
+ */
+public class Test {
+
+}

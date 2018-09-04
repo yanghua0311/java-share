@@ -6,15 +6,28 @@ package com.demo.share.ali;
 import java.util.Date;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ3ÈÕ
+ * Created by youngwa on 2018/9/4.
  *
  */
-public class User {
+public class User implements Comparable<User>{
 	private Long userId;
 	private String userName;
 	private Date loginTime;
-	/**
+
+    public User(Long userId) {
+        this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                '}';
+    }
+
+    /**
 	 * @return the userId
+
 	 */
 	public Long getUserId() {
 		return userId;
@@ -50,4 +63,8 @@ public class User {
 		this.loginTime = loginTime;
 	}
 
+    @Override
+    public int compareTo(User o) {
+        return this.getUserId().intValue() - o.getUserId().intValue();
+    }
 }

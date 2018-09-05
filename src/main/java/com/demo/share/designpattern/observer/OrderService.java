@@ -12,4 +12,11 @@ package com.demo.share.designpattern.observer;
  */
 public class OrderService {
 
+    public void save() {
+        System.out.println("开始保存商品");
+
+        System.out.println("进入邮寄环节");
+
+        System.out.println("发送信息给用户");
+    }
 }

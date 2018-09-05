@@ -8,5 +8,8 @@ package com.demo.share.designpattern.template;
  *
  */
 public class Test {
-
+	public static void main(String[] args) {
+		AbstractAction one = new OneAction();
+		one.excute();
+	}
 }

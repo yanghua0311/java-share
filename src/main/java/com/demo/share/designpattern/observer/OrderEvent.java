@@ -1,42 +1,21 @@
+/**
+ * 
+ */
 package com.demo.share.designpattern.observer;
 
 import org.springframework.context.ApplicationEvent;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.event.SmartApplicationListener;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 /**
- * ..
+ * Created by youngwa on 2018年9月5日
  *
- * @author 杨华
- * @version 1.0
- * @company 上海朝阳永续信息技术有限公司
- * @copyright (c) 2016 SunTime Co'Ltd Inc. All rights reserved.
- * @date 2018-09-05 13:26
- * @since JDK1.7
  */
+public class OrderEvent extends ApplicationEvent{
 
-@Component
-public class OrderEvent implements SmartApplicationListener {
-    @Override
-    public boolean supportsEventType(Class<? extends ApplicationEvent> eventType) {
-        return false;
-    }
+	/**
+	 * @param source
+	 */
+	public OrderEvent(String source) {
+		super(source);
+	}
 
-    @Override
-    public boolean supportsSourceType(Class<?> sourceType) {
-        return false;
-    }
-
-    @Override
-    public void onApplicationEvent(ApplicationEvent event) {
-
-    }
-    @Bean
-    @Override
-    public int getOrder() {
-        return 0;
-    }
 }

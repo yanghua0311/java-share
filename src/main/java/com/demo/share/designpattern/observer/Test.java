@@ -3,6 +3,8 @@
  */
 package com.demo.share.designpattern.observer;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.demo.share.InitSpringContext;
 
 /**
@@ -10,7 +12,10 @@ import com.demo.share.InitSpringContext;
  *
  */
 public class Test {
+	
     public static void main(String[] args) {
-        InitSpringContext.init();
+    	ClassPathXmlApplicationContext classPathXmlApplicationContext = InitSpringContext.init();
+    	OrderService orderService = (com.demo.share.designpattern.observer.OrderService) classPathXmlApplicationContext.getBean("orderService");
+    	orderService.save();
     }
 }

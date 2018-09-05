@@ -1,5 +1,11 @@
 package com.demo.share.designpattern.observer;
 
+import java.applet.AppletContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
+
 /**
  * ..
  *
@@ -10,13 +16,15 @@ package com.demo.share.designpattern.observer;
  * @date 2018-09-05 11:07
  * @since JDK1.7
  */
+@Service
 public class OrderService {
-
+	
+	@Autowired
+	ApplicationContext applicationContext;
+	
     public void save() {
         System.out.println("开始保存商品");
-
-        System.out.println("进入邮寄环节");
-
-        System.out.println("发送信息给用户");
+        applicationContext.publishEvent(new OrderEvent("传递对象"));
+        
     }
 }

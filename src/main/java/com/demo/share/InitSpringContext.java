@@ -13,7 +13,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @since JDK1.7
  */
 public class InitSpringContext {
-    public static void init() {
+    public static ClassPathXmlApplicationContext init() {
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        return classPathXmlApplicationContext;
     }
 }

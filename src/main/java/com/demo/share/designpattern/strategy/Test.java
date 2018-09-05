@@ -6,7 +6,6 @@ package com.demo.share.designpattern.strategy;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.demo.share.InitSpringContext;
-import com.demo.share.designpattern.observer.OrderService;
 
 /**
  * Created by youngwa on 2018/9/05.

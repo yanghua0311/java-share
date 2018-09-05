@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Component
-public class MessageObserver2 implements SmartApplicationListener {
+public class MessageObserver implements SmartApplicationListener {
     @Override
     public boolean supportsEventType(Class<? extends ApplicationEvent> eventType) {
     	return eventType == OrderEvent.class;

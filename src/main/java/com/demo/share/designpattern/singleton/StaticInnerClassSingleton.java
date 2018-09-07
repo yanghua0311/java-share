@@ -14,7 +14,7 @@ package com.demo.share.designpattern.singleton;
 public class StaticInnerClassSingleton {
 
 	private StaticInnerClassSingleton(){}
-	
+
 	private static class SingletonInstance {
 		private static final StaticInnerClassSingleton instance = new StaticInnerClassSingleton();
 	}
@@ -22,5 +22,5 @@ public class StaticInnerClassSingleton {
 	public static StaticInnerClassSingleton getInstance() {
 		return SingletonInstance.instance;
 	}
-	
+
 }

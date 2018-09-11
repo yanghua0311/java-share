@@ -1,6 +1,58 @@
 # java实现HTTP请求的三种方式
 
-　　目前JAVA实现HTTP请求的方法用的最多的有两种：一种是通过HTTPClient这种第三方的开源框架去实现。HTTPClient对HTTP的封装性比较不错，通过它基本上能够满足我们大部分的需求，HttpClient3.1 是 org.apache.commons.httpclient下操作远程 url的工具包，虽然已不再更新，但实现工作中使用httpClient3.1的代码还是很多，HttpClient4.5是org.apache.http.client下操作远程 url的工具包，最新的；另一种则是通过HttpURLConnection去实现，HttpURLConnection是JAVA的标准类，是JAVA比较原生的一种实现方式。
+　　HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。它于1990年提出，经过几年的使用与发展，得到不断地完善和扩展。目前在WWW中使用的是HTTP/1.0的第六版，HTTP/1.1的规范化工作正在进行之中，而且HTTP-NG(Next Generation of HTTP)的建议已经提出。
+
+一次完整http请求过程：
+
+https://blog.csdn.net/yezitoo/article/details/78193794
+
+HTTP协议的主要特点可概括如下：
+
+1.支持客户/服务器模式。
+
+2.简单快速：客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。
+
+3.灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。
+
+4.无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。
+
+5.无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。
+
+
+
+ http请求由三部分组成，分别是：请求行、消息报头、请求正文
+
+1、请求行以一个方法符号开头，以空格分开，后面跟着请求的URI和协议的版本，格式如下：Method Request-URI HTTP-Version CRLF  
+
+其中 Method表示请求方法；Request-URI是一个统一资源标识符；HTTP-Version表示请求的HTTP协议版本；CRLF表示回车和换行（除了作为结尾的CRLF外，不允许出现单独的CR或LF字符）。
+
+请求方法（所有方法全为大写）有多种，各个方法的解释如下：
+
+GET     请求获取Request-URI所标识的资源
+
+POST    在Request-URI所标识的资源后附加新的数据
+
+HEAD    请求获取由Request-URI所标识的资源的响应消息报头
+
+PUT     请求服务器存储一个资源，并用Request-URI作为其标识
+
+DELETE  请求服务器删除Request-URI所标识的资源
+
+TRACE   请求服务器回送收到的请求信息，主要用于测试或诊断
+
+CONNECT 保留将来使用
+
+OPTIONS 请求查询服务器的性能，或者查询与资源相关的选项和需求
+
+应用举例：
+
+GET方法：在浏览器的地址栏中输入网址的方式访问网页时，浏览器采用GET方法向服务器获取资源，eg:GET /form.html HTTP/1.1 (CRLF)
+
+POST方法要求被请求服务器接受附在请求后面的数据，常用于提交表单。
+
+
+
+​	目前JAVA实现HTTP请求的方法用的最多的有两种：一种是通过HTTPClient这种第三方的开源框架去实现。HTTPClient对HTTP的封装性比较不错，通过它基本上能够满足我们大部分的需求，HttpClient3.1 是 org.apache.commons.httpclient下操作远程 url的工具包，虽然已不再更新，但实现工作中使用httpClient3.1的代码还是很多，HttpClient4.5是org.apache.http.client下操作远程 url的工具包，最新的；另一种则是通过HttpURLConnection去实现，HttpURLConnection是JAVA的标准类，是JAVA比较原生的一种实现方式。
 
 　　
 

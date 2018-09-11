@@ -1,11 +1,11 @@
-package com.demo.share.com.demo.share.liangzaiyangxin.test;
+package com.demo.share.liangzaiyangxin.test;
 
 /**
- * ╣щ╧И...
+ * О©╫щ╧О©╫...
  *
- * @author илюМаа
+ * @author О©╫О©╫О©╫О©╫О©╫О©╫
  * @version 1.0
- * @company ио╨ёЁ╞яТсюпЬпео╒╪╪йУ╧и╥щспоч╧╚к╬
+ * @company О©╫о╨О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫О©╫О©╫и╥О©╫О©╫О©╫О©╫ч╧О©╫к╬
  * @copyright (c) 2018 SunTime Co'Ltd Inc. All rights reserved.
  * @date 2018/9/7 16:22
  * @since JDK1.7
@@ -19,11 +19,11 @@ public class RecursiveTest {
     }
 
     /**
-     * @Description: р╩╢неюр╩╦Ж╩Ра╫╦Жб╔лщ║ё╧╡сп╤Юиыжжею╥╗
+     * @Description: р╩О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╔О©╫щ║О©╫О©╫О©╫О©╫п╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
      *
-     * @auther: илюМаа
+     * @auther: О©╫О©╫О©╫О©╫О©╫О©╫
      * @date: 16:24 2018/9/7
-     * @param n б╔лщйЩ
+     * @param n б╔О©╫О©╫О©╫О©╫
      * @return: int
      */
     public static int climbStairs(int n) {

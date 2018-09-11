@@ -9,7 +9,7 @@ public class RecursiveTest {
 
     public static void main(String[] args) {
 
-        System.out.println(climbStairs(6));
+        System.out.println(climbStairs(4));
 
     }
 
@@ -26,7 +26,7 @@ public class RecursiveTest {
             return i;
         }
         if (n == 2) {
-            return i++;
+            return ++i;
         } else {
             return climbStairs(n - 1) + climbStairs(n - 2);
         }

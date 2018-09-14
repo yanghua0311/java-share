@@ -6,7 +6,7 @@ package com.demo.share.aop.jdkproxy;
 import java.lang.reflect.Proxy;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class LearnTest {

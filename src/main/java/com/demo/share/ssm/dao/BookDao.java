@@ -32,4 +32,6 @@ public interface BookDao {
 	 */
 	int reduceNumber(long bookId);
 
+    void insertBook(Book book);
+
 }

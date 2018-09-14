@@ -4,12 +4,12 @@
 package com.demo.share.aop.cglib;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class LearnService {
 	public void read() {
-		System.out.println("======================>¿ªÊ¼ÔÄ¶Á");
+		System.out.println("======================>å¼€å§‹é˜…è¯»");
 	}
 
 }

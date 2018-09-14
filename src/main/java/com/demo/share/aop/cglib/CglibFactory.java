@@ -6,12 +6,12 @@ package com.demo.share.aop.cglib;
 import net.sf.cglib.proxy.Enhancer;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class CglibFactory {
 	/**
-	 * »ñµÃÔöÇ¿Ö®ºóµÄÄ¿±êÀà£¬¼´Ìí¼ÓÁËÇĞÈëÂß¼­adviceÖ®ºóµÄÄ¿±êÀà
+	 * è·å¾—å¢å¼ºä¹‹åçš„ç›®æ ‡ç±»ï¼Œå³æ·»åŠ äº†åˆ‡å…¥é€»è¾‘adviceä¹‹åçš„ç›®æ ‡ç±»
 	 * 
 	 * @param proxy
 	 * @return
@@ -19,9 +19,9 @@ public class CglibFactory {
 	public static LearnService getInstance(CglibProxy proxy) {
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(LearnService.class);
-		//»Øµ÷·½·¨µÄ²ÎÊıÎª´úÀíÀà¶ÔÏóCglibProxy£¬×îºóÔöÇ¿Ä¿±êÀàµ÷ÓÃµÄÊÇ´úÀíÀà¶ÔÏóCglibProxyÖĞµÄintercept·½·¨
+		//å›è°ƒæ–¹æ³•çš„å‚æ•°ä¸ºä»£ç†ç±»å¯¹è±¡CglibProxyï¼Œæœ€åå¢å¼ºç›®æ ‡ç±»è°ƒç”¨çš„æ˜¯ä»£ç†ç±»å¯¹è±¡CglibProxyä¸­çš„interceptæ–¹æ³•
 		enhancer.setCallback(proxy);
-		//´Ë¿Ì£¬base²»ÊÇµ¥´¿µÄÄ¿±êÀà£¬¶øÊÇÔöÇ¿¹ıµÄÄ¿±êÀà
+		//æ­¤åˆ»ï¼Œbaseä¸æ˜¯å•çº¯çš„ç›®æ ‡ç±»ï¼Œè€Œæ˜¯å¢å¼ºè¿‡çš„ç›®æ ‡ç±»
 		LearnService learnService = (LearnService) enhancer.create();
 		return learnService;
 	}

@@ -4,19 +4,19 @@
 package com.demo.share.aop.jdkproxy;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class MyLearn implements LearnService{
 
 	@Override
 	public void read() {
-		System.out.println("=======================¡·¿ªÊ¼ÔÄ¶Á");
+		System.out.println("=======================ã€‹å¼€å§‹é˜…è¯»");
 	}
 
 	@Override
 	public void takingNotes() {
-		System.out.println("=======================¡·¿ªÊ¼¼ÇÂ¼±Ê¼Ç");
+		System.out.println("=======================ã€‹å¼€å§‹è®°å½•ç¬”è®°");
 	}
 
 }

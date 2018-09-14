@@ -9,18 +9,18 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class CglibProxy implements MethodInterceptor {
 
 	@Override
 	public Object intercept(Object object, Method arg1, Object[] arg2, MethodProxy proxy) throws Throwable {
-		// Ìí¼ÓÇĞÃæÂß¼­£¨advise£©£¬´Ë´¦ÊÇÔÚÄ¿±êÀà´úÂëÖ´ĞĞÖ®Ç°£¬¼´ÎªMethodBeforeAdviceInterceptor¡£
+		// æ·»åŠ åˆ‡é¢é€»è¾‘ï¼ˆadviseï¼‰ï¼Œæ­¤å¤„æ˜¯åœ¨ç›®æ ‡ç±»ä»£ç æ‰§è¡Œä¹‹å‰ï¼Œå³ä¸ºMethodBeforeAdviceInterceptorã€‚
 		System.out.println("before-------------");
-		// Ö´ĞĞÄ¿±êÀàadd·½·¨
+		// æ‰§è¡Œç›®æ ‡ç±»addæ–¹æ³•
 		proxy.invokeSuper(object, arg2);
-		// Ìí¼ÓÇĞÃæÂß¼­£¨advise£©£¬´Ë´¦ÊÇÔÚÄ¿±êÀà´úÂëÖ´ĞĞÖ®ºó£¬¼´ÎªMethodAfterAdviceInterceptor¡£
+		// æ·»åŠ åˆ‡é¢é€»è¾‘ï¼ˆadviseï¼‰ï¼Œæ­¤å¤„æ˜¯åœ¨ç›®æ ‡ç±»ä»£ç æ‰§è¡Œä¹‹åï¼Œå³ä¸ºMethodAfterAdviceInterceptorã€‚
 		System.out.println("after--------------");
 
 		return null;

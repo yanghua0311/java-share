@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class LearnHander implements InvocationHandler{
@@ -21,9 +21,9 @@ public class LearnHander implements InvocationHandler{
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		System.out.println("==============¡·×¼±¸¹¤×÷");
+		System.out.println("==============ã€‹å‡†å¤‡å·¥ä½œ");
 		Object invoke = method.invoke(target, args);
-		System.out.println("==============¡·½áÊø¹¤×÷");
+		System.out.println("==============ã€‹ç»“æŸå·¥ä½œ");
 		return null;
 	}
 

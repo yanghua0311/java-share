@@ -6,13 +6,13 @@ package com.demo.share.aop.cglib;
 import net.sf.cglib.proxy.Factory;
 
 /**
- * Created by youngwa on 2018Äê9ÔÂ4ÈÕ
+ * Created by youngwa on 2018å¹´9æœˆ4æ—¥
  *
  */
 public class CglibTest {
 	public static void main(String[] args) {
 		CglibProxy proxy = new CglibProxy();
-		// baseÎªÉú³ÉµÄÔöÇ¿¹ıµÄÄ¿±êÀà
+		// baseä¸ºç”Ÿæˆçš„å¢å¼ºè¿‡çš„ç›®æ ‡ç±»
 		LearnService service = CglibFactory.getInstance(proxy);
 		service.read();
 	}

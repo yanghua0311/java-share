@@ -8,12 +8,8 @@ import java.net.URL;
 /**
  * java原生HttpURLConnection...
  *
- * @author 商理亮
- * @version 1.0
- * @company 上海朝阳永续信息技术股份有限公司
- * @copyright (c) 2018 SunTime Co'Ltd Inc. All rights reserved.
+ * @author 杨华
  * @date 2018/9/10 16:43
- * @since JDK1.7
  */
 public class HttpClient {
 

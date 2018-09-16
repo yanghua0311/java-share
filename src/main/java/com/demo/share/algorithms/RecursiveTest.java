@@ -1,4 +1,4 @@
-package com.demo.share.liangzaiyangxin.test;
+package com.demo.share.algorithms;
 
 /**
  * @author ssl

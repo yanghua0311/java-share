@@ -15,13 +15,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestController {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext init = InitSpringContext.init();
-        AllService allService = (AllService) init.getBean("allService");
-        Book book = new Book();
-        book.setBookId(2000L);
-        book.setName("计算机组成原理");
-        book.setNumber(20);
-        allService.insert(book);
-        System.out.println(book);
+        BookService bookService = (BookService) init.getBean("bookService");
+
+        System.out.println(bookService.update());
+
 
     }
 }

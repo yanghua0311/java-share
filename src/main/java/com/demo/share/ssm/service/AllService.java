@@ -22,13 +22,11 @@ public class AllService {
     BookService bookService;
 
 
-    @Transactional
     public void insert(Book book) {
-        try {
             bookService.insert(book);
-            appService.insert();
-        } catch (Exception e) {
+//            appService.insert();
 
-        }
     }
+
+
 }

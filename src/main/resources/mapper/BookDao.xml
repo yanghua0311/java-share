@@ -38,8 +38,17 @@
 
     <insert id="insertBook">
         <!-- ignore 主键冲突，报错 -->
-        INSERT ignore INTO book (book_id, name, number)
+        INSERT INTO book (book_id, name, number)
         VALUES (#{bookId}, #{name}, #{number})
     </insert>
+
+	<!--<select id="reduceNumber" resultType="int">-->
+		<!--&lt;!&ndash; 具体的sql &ndash;&gt;-->
+		<!--UPDATE book-->
+		<!--SET number = number - 1-->
+		<!--WHERE-->
+		<!--book_id = #{bookId}-->
+		<!--AND number > 0-->
+	<!--</select>-->
 
 </mapper>

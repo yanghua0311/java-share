@@ -28,13 +28,17 @@ public class BookService {
     @Autowired
     BookDao bookDao;
 
-    @Transactional
+//    @Transactional
     public void insert(Book book) {
         bookDao.insertBook(book);
-        try {
-            int i = 10 / 0;
-        } catch (ArithmeticException e) {
-            throw new AppointException("为0");
-        }
+//        try {
+//            int i = 10 / 0;
+//        } catch (ArithmeticException e) {
+//            throw new AppointException("为0");
+//        }
+    }
+
+    public Integer update() {
+        return bookDao.reduceNumber(2000l);
     }
 }
